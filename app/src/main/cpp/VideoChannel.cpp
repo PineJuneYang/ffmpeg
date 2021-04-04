@@ -159,7 +159,7 @@ void VideoChannel::render() {
        }
        sws_scale(context,avFrame->data,avFrame->linesize,0,avCodecContext->height,dst,dstStride);
 
-
+#if 0
         double clock =  avFrame->best_effort_timestamp*av_q2d(time_base);
 
         //额外的间隔时间 ,当在解码的时候  应该延迟  this signals how much the picture must be delayed.
@@ -210,7 +210,7 @@ void VideoChannel::render() {
 
         }
 
-
+#endif
 
        //休眠  解决不会卡顿
 

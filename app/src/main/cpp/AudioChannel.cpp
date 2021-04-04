@@ -121,9 +121,9 @@ void AudioChannel::play() {
 
     //1.解码
 
-//    pthread_create(&pid_audio_decode,0,audio_decode,this);
-//    //2.播放
-//    pthread_create(&pid_audio_play,0,audio_play,this);
+    pthread_create(&pid_audio_decode,0,audio_decode,this);
+    //2.播放
+    pthread_create(&pid_audio_play,0,audio_play,this);
 
 
 
